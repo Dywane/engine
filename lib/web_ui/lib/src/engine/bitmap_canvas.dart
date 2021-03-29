@@ -217,6 +217,7 @@ class BitmapCanvas extends EngineCanvas {
       }
     }
     _children.clear();
+    _childOverdraw = false;
     _cachedLastCssFont = null;
     _setupInitialTransform();
   }
@@ -441,8 +442,8 @@ class BitmapCanvas extends EngineCanvas {
     if (blendMode != null) {
       element.style.mixBlendMode = _stringForBlendMode(blendMode) ?? '';
     }
-    // Switch to preferring DOM from now on.
-    _childOverdraw = true;
+    // Switch to preferring DOM from now on, and close the current canvas.
+    _closeCurrentCanvas();
   }
 
   @override
@@ -576,7 +577,7 @@ class BitmapCanvas extends EngineCanvas {
       String cssColor = paint.color == null
           ? '#000000'
           : colorToCssString(
-              paint.color)!; // ignore: unnecessary_null_comparison
+              paint.color)!;
       final double sigma = paint.maskFilter!.webOnlySigma;
       if (browserEngine == BrowserEngine.webkit && !isStroke) {
         // A bug in webkit leaves artifacts when this element is animated
@@ -601,9 +602,7 @@ class BitmapCanvas extends EngineCanvas {
       _applyTargetSize(
           imageElement, image.width.toDouble(), image.height.toDouble());
     }
-    _childOverdraw = true;
-    _canvasPool.closeCurrentCanvas();
-    _cachedLastCssFont = null;
+    _closeCurrentCanvas();
   }
 
   html.ImageElement _reuseOrCreateImage(HtmlImage htmlImage) {
@@ -649,6 +648,7 @@ class BitmapCanvas extends EngineCanvas {
         case ui.BlendMode.color:
         case ui.BlendMode.luminosity:
         case ui.BlendMode.xor:
+        case ui.BlendMode.dstATop:
           imgElement = _createImageElementWithSvgFilter(
               image, colorFilter.color, colorFilter.blendMode, paint);
           break;
@@ -847,6 +847,7 @@ class BitmapCanvas extends EngineCanvas {
   void _closeCurrentCanvas() {
     _canvasPool.closeCurrentCanvas();
     _childOverdraw = true;
+    _cachedLastCssFont = null;
   }
 
   void setCssFont(String cssFont) {
