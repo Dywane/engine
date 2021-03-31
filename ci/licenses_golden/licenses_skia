@@ -1,4 +1,4 @@
-Signature: 10362a5a4ea3162cce19490c57bdd3ea
+Signature: 389876b5ba5cd21d93b51b68cecb11ea
 
 UNUSED LICENSES:
 
@@ -1177,6 +1177,7 @@ FILE: ../../../third_party/skia/infra/bots/recipe_modules/flavor/examples/full.e
 FILE: ../../../third_party/skia/infra/bots/recipe_modules/flavor/examples/full.expected/retry_ios_install_retries_exhausted.json
 FILE: ../../../third_party/skia/infra/bots/recipe_modules/git/examples/full.expected/test-win.json
 FILE: ../../../third_party/skia/infra/bots/recipe_modules/git/examples/full.expected/test.json
+FILE: ../../../third_party/skia/infra/bots/recipe_modules/gold_upload/examples/full.expected/upload_tests.json
 FILE: ../../../third_party/skia/infra/bots/recipe_modules/gsutil/examples/full.expected/failed_all_uploads.json
 FILE: ../../../third_party/skia/infra/bots/recipe_modules/gsutil/examples/full.expected/failed_one_upload.json
 FILE: ../../../third_party/skia/infra/bots/recipe_modules/gsutil/examples/full.expected/gsutil_tests.json
@@ -1429,6 +1430,10 @@ FILE: ../../../third_party/skia/site/user/api/METADATA
 FILE: ../../../third_party/skia/site/user/api/catalog.htm
 FILE: ../../../third_party/skia/site/user/modules/METADATA
 FILE: ../../../third_party/skia/site/user/modules/PathKit_effects.png
+FILE: ../../../third_party/skia/site2/_index.html
+FILE: ../../../third_party/skia/site2/about/_index.html
+FILE: ../../../third_party/skia/site2/config.toml
+FILE: ../../../third_party/skia/site2/featured-background.png
 FILE: ../../../third_party/skia/specs/web-img-decode/current/index.html
 FILE: ../../../third_party/skia/specs/web-img-decode/proposed/impl/impl.js
 FILE: ../../../third_party/skia/specs/web-img-decode/proposed/index.html
@@ -3642,6 +3647,7 @@ FILE: ../../../third_party/skia/src/gpu/d3d/GrD3DGpu.cpp
 FILE: ../../../third_party/skia/src/gpu/d3d/GrD3DGpu.h
 FILE: ../../../third_party/skia/src/gpu/d3d/GrD3DOpsRenderPass.cpp
 FILE: ../../../third_party/skia/src/gpu/d3d/GrD3DOpsRenderPass.h
+FILE: ../../../third_party/skia/src/gpu/d3d/GrD3DPipeline.h
 FILE: ../../../third_party/skia/src/gpu/d3d/GrD3DPipelineState.cpp
 FILE: ../../../third_party/skia/src/gpu/d3d/GrD3DPipelineState.h
 FILE: ../../../third_party/skia/src/gpu/d3d/GrD3DPipelineStateBuilder.cpp
@@ -5434,6 +5440,7 @@ FILE: ../../../third_party/skia/include/sksl/DSLFunction.h
 FILE: ../../../third_party/skia/include/sksl/DSLStatement.h
 FILE: ../../../third_party/skia/src/gpu/tessellate/GrPathTessellator.cpp
 FILE: ../../../third_party/skia/src/gpu/tessellate/GrPathTessellator.h
+FILE: ../../../third_party/skia/src/gpu/tessellate/GrStrokeTessellator.h
 FILE: ../../../third_party/skia/src/gpu/tessellate/GrTessellatingStencilFillOp.cpp
 FILE: ../../../third_party/skia/src/gpu/tessellate/GrTessellatingStencilFillOp.h
 FILE: ../../../third_party/skia/src/sksl/SkSLMangler.cpp
@@ -5679,6 +5686,7 @@ FILE: ../../../third_party/skia/fuzz/FuzzDDLThreading.cpp
 FILE: ../../../third_party/skia/gm/aarecteffect.cpp
 FILE: ../../../third_party/skia/gm/colorspace.cpp
 FILE: ../../../third_party/skia/gm/largeclippedpath.cpp
+FILE: ../../../third_party/skia/include/private/GrMtlTypesPriv.h
 FILE: ../../../third_party/skia/modules/skottie/src/effects/FractalNoiseEffect.cpp
 FILE: ../../../third_party/skia/modules/skottie/src/effects/SphereEffect.cpp
 FILE: ../../../third_party/skia/modules/skottie/src/effects/ThresholdEffect.cpp
@@ -5910,6 +5918,7 @@ LIBRARY: skia
 ORIGIN: ../../../third_party/skia/fuzz/oss_fuzz/FuzzDDLThreading.cpp + ../../../third_party/skia/LICENSE
 TYPE: LicenseType.bsd
 FILE: ../../../third_party/skia/fuzz/oss_fuzz/FuzzDDLThreading.cpp
+FILE: ../../../third_party/skia/fuzz/oss_fuzz/FuzzRegionOp.cpp
 FILE: ../../../third_party/skia/fuzz/oss_fuzz/FuzzSkParagraph.cpp
 ----------------------------------------------------------------------------------------------------
 Copyright 2021 Google, LLC
